@@ -1639,10 +1639,11 @@
 /* Type */
 
 	body, input, select, textarea {
-		color: rgba(255, 255, 255, 0.55);
-		font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
-		font-size: 16.5pt;
-		font-weight: normal;
+		/*color: rgba(255, 255, 255, 0.55);*/
+		color: #fff;
+		font-family: 'Lato', Arial, Helvetica, sans-serif;
+		font-size: 17pt;
+		font-weight: 300;
 		line-height: 1.75;
 	}
 
@@ -1700,7 +1701,7 @@
 
 	h1, h2, h3, h4, h5, h6 {
 		color: #ffffff;
-		font-weight: bold;
+		font-weight: 400;
 		line-height: 1.5;
 		margin: 0 0 0.5em 0;
 	}
@@ -2857,6 +2858,9 @@
 					padding-left: 0;
 				}
 
+				ul.contact {
+					flex-direction: column;
+				}
 			}
 
 	dl {
@@ -3111,14 +3115,18 @@
 
 			.spotlights > section {
 				display: block;
+				padding-top: 2em;
 			}
 
 				.spotlights > section > .image {
-					width: 100%;
-					height: 50vh;
+					/*width: 100%;*/
+					margin: 0 auto;
+					/*padding-top: 2em;*/
+					height: 25vh;
 				}
 
 				.spotlights > section > .content {
+					padding: 3em 2em 0em 2em;
 					width: 100%;
 				}
 
@@ -3134,12 +3142,16 @@
 		@media screen and (max-width: 736px) {
 
 			.spotlights > section > .image {
-				height: 50vh;
+				height: 25vh;
 				min-height: 15em;
 			}
 
 			.spotlights > section > .content {
-				padding: 3em 2em 1em 2em ;
+				padding: 3em 2em 0em 2em ;
+			}
+
+			.spotlights > section {
+				padding-top: 3em;
 			}
 
 		}
@@ -3252,18 +3264,18 @@
 		}
 
 		.wrapper.style1 {
-			background-color: #98cdb2;
+			background-color: #484848;
 			/*background-image: url("./images/forest-fog.jpg");*/
 		}
 
 		.wrapper.style1-alt {
-			background-color: #91bca8;
+			background-color: #b7d9ce;
 		}
 
 /*	-webkit-linear-gradient(#ACBCAF, #B2C0B0)*/
 
 		.wrapper.style2 {
-			background-color: #484848;
+			background-color: #b7d9ce;
 		}
 
 		.wrapper.style2-alt {
@@ -3273,6 +3285,11 @@
 		.wrapper.style3 {
 			background-color: #fff;
 			background-image: url("images/intro.svg")
+		}
+
+		.wrapper.style4 {
+			background-color: #fff ;
+			border-top: 3px solid #e8e8e8;
 		}
 
 		.wrapper.style3-alt {
@@ -3896,34 +3913,7 @@
 		flex-direction: row;
 	}
 
-		#intro p {
-			font-size: 1.25em;
-		}
-
-			@media screen and (max-width: 980px) {
-
-				#intro p br {
-					display: none;
-				}
-			}
-
-			@media screen and (max-width: 736px) {
-
-				#intro p {
-					font-size: 1em;
-				}
-
-			}
-
-		@media screen and (max-width: 1280px) {
-
-			#intro {
-				background-attachment: scroll;
-			}
-
-		}
-
-		.spotlight-img {
+	.spotlight-img {
 
 			float: right;
 			background-position: center;
@@ -3936,9 +3926,55 @@
 			border: 5px solid #91bca8;
 		}
 
+		#intro p {
+			font-size: 1.25em;
+		}
+
+			@media screen and (max-width: 980px) {
+
+				#intro p br {
+					display: none;
+				}
+			}
+
+			@media screen and (max-width: 549px) {
+
+			.wrapper > .inner {
+				padding: 3em 0 1em 0;
+			}
+				.spotlight-img {
+					background-position: top center;
+					border-radius: 50%;					
+					height:220px;
+					width: 220px;
+					background-image: url('../../../images/alex-profile.jpg');
+					margin: 0 auto;
+					background-repeat: no-repeat;
+					border: 5px solid #91bca8;
+				}
+			}
+
+			@media screen and (max-width: 736px) {
+
+				#intro p {
+					font-size: 1em;
+				}
+			}
+
+		@media screen and (max-width: 1280px) {
+
+			#intro {
+				background-attachment: scroll;
+			}
+
+		}
+
+		
+
 		.ak-intro {
 			color: #484848;
-			font-family: Helvetica;
+			font-family: 'Lato', Helvetica;
+			font-weight: 300;
 		}
 
 		.background-wurld {
@@ -3956,5 +3992,19 @@
 		}
 
 		.dark-text {
+			color: #484848;
+		}
+
+		.table-box {
+			background-color: #fefefe;
+		}
+
+		.about-me {
+			padding: 1em 4em;
+			color: #484848;
+			/*border-top: 2px solid #91bca8;*/
+		}
+
+		.about-me > h2 {
 			color: #484848;
 		}
